@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap');
+// Файл обнуляющих стилей
+@import "_nullstyle";
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.header {
+	display: grid;
+	align-content: space-between;
+	justify-items: center;
+	height: calc(250px + (420-250) * ((100vw - 320px) / (1440 - 320)));
+	background-image: url(/img/bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 30px;
+	margin-bottom: 10px;
+
+	&__img {
+		width: 100%;
+	}
+
+	&__title {
+		font-family: 'Bebas Neue', cursive;
+		font-size: 3em;
+		line-height: 135%;
+		letter-spacing: 0.1em;
+		text-align: center;
+		color: #fff;
+	}
+
+	&__subtitle {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: 0.85em;
+		line-height: 135%;
+		text-align: center;
+		color: #fff;
+	}
+
+	&__link {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: 0.65em;
+		line-height: 135%;
+		text-align: center;
+		letter-spacing: 0.15em;
+		color: #fff;
+	}
+	&__link:hover {
+		color: #00A4E5
+	}
+}
+
+.nav {
+	margin: 0 auto;
+	display: grid;
+	grid-auto-flow:column;
+	grid-template-columns: 1.5fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr;
+	justify-items: center;
+	align-items: center;
+	border-bottom: 1px solid #E6E6E6;
+	padding: 0 12%;
+
+	&__logo {
+		width: 80px;
+		justify-self: start;
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__link {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: 0.7em;
+		line-height: 350%;
+		letter-spacing: 0.1em;
+		color: #000;
+	}
+	&__link:hover {
+		color: #00A4E5;
+	}
+}
+
+.about {
+	width: 75%;
+	margin: 0 auto;
+	display: grid;
+	grid-template: 1fr 1fr / 1fr 1fr;
+	column-gap: 100px;
+
+	&__title {
+		grid-column: span 2;
+		align-self: center;
+		justify-self: center;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 1.1em;
+		line-height: 300%;
+		letter-spacing: 0.13em;
+		color: #000;
+		position: relative;
+	}
+
+	&__title:after {
+		content:"";
+      position:absolute;
+      bottom:0;
+      left:30%;
+      width:40%;
+      height:3px;
+      background:#00A4E5;
+	}
+
+	&__text {
+		width: 94%;
+
+		.about__subtitle {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			font-size: 1.1em;
+			line-height: 135%;
+			letter-spacing: 1.1;
+			color: #000;
+		}
+
+		.about__subtitle_blue {
+			color: #00A4E5;
+		}
+
+		.about__desc {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 0.8em;
+			line-height: 135%;
+			letter-spacing: 1.1;
+			color: #000;
+			margin-top: 30px;
+		}
+	}
+
+	&__images {
+		display: grid;
+		grid-template: 1fr/ 1fr 1fr 1fr;
+		gap: 20px;
+		padding-top: 50px;
+
+		.about__plan {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			font-size: 1.2em;
+			line-height: 135%;
+			letter-spacing: 1.1;
+			color: #fff;
+			background: url('../img/plan.png') 0 0/180px 254px no-repeat;
+			padding: 20px;
+		}
+
+		.about__manage {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			font-size: 1.2em;
+			line-height: 135%;
+			letter-spacing: 1.1;
+			color: #fff;
+			background: url('../img/manage.png') 0 0/180px 254px no-repeat;
+			padding: 20px;
+		}
+
+		.about__build {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			font-size: 1.2em;
+			line-height: 135%;
+			letter-spacing: 1.1;
+			color: #fff;
+			background: url('../img/build.png') 0 0/180px 254px no-repeat;
+			padding: 20px;
+		}
+	}
+}
+
+.services {
+	width: 75%;
+	margin: 0 auto;
+	display: grid;
+	grid-template: 1fr 1fr/ 1fr;
+
+	&__heading {
+		align-self: center;
+		display: grid;
+		grid-template: 1fr/ 1.5fr 2fr 0.8fr;
+		column-gap: 20px;
+
+		.services__title {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			font-size: 1.1em;
+			line-height: 150%;
+			letter-spacing: 0.12em;
+			color: #000;
+			position: relative;
+		}
+		.services__title::after {
+			content:"";
+      	position:absolute;
+      	bottom:0;
+      	left:0;
+      	width:28%;
+      	height:3px;
+      	background:#00A4E5;
+		}
+
+		.services__text {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 0.75em;
+			line-height: 165%;
+			letter-spacing: 1.1;
+			color: #000;
+		}
+
+		.services__link {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			font-size: 0.9em;
+			line-height: 255%;
+			letter-spacing: 1.1;
+			color: #fff;
+			background: #00A4E5;
+			text-align: center;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template: 1fr/ 1fr 1fr 1fr;
+		column-gap: 30px;
+	}
+
+	.item {
+		padding: 25px;
+		border: 1px solid #E6E6E6;
+
+		&__title {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			font-size: 0.9em;
+			line-height: 150%;
+			letter-spacing: 1;
+			color: #000;
+			margin-top: 20px;
+		}
+
+		&__text {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 0.75em;
+			line-height: 165%;
+			letter-spacing: 1.1;
+			color: #000;
+			margin-top: 15px;
+		}
+	}
+}
+
+.creating {
+	padding: 160px 0 250px 0;
+	background: url('../img/town.png') 0 0/100% 101% no-repeat;
+
+	&__title {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 1.3em;
+		line-height: 130%;
+		letter-spacing: 1;
+		color: #000;
+		width: 23%;
+		margin: 0 auto;
+		text-align: center;
+		padding-bottom: 40px;
+	}
+
+	&__link {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 0.9em;
+		line-height: 255%;
+		letter-spacing: 1.1;
+		color: #fff;
+		background: #00A4E5;
+		text-align: center;
+		width: 210px;
+		height: 50px;
+		margin: 0 auto;
+	}
+}
+
+.newsletter {
+	display: grid;
+	grid-template: 1fr/ 0.75fr 1fr;
+	column-gap: 60px;
+	background: #171819;
+	padding: 30px 0 25px 0;
+
+	&__title {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 1.1em;
+		line-height: 200%;
+		letter-spacing: 1;
+		color: #fff;
+		justify-self: end;
+	}
+
+	&__sign-up {
+		width: 450px;
+		height: 50px;
+		background: #00A4E5;
+		display: grid;
+		grid-template: 1fr/ 1fr 1fr;
+	}
+
+	&__input {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 0.65em;
+		line-height: 165%;
+		letter-spacing: 1.1;
+		color: #48555B;
+		width: 260px;
+		height: 50px;
+		vertical-align: middle;
+		padding: 10px;
+	}
+
+	&__button {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 0.9em;
+		line-height: 255%;
+		letter-spacing: 1.1;
+		color: #fff;
+		background: #00A4E5;
+		text-align: center;
+		width: 160px;
+		height: 50px;
+	}
+}
+
+.footer {
+	background: #141A20;
+
+	.footer__content {
+		width: 75%;
+		margin: 0 auto;
+		display: grid;
+		grid-template: 1fr/ 2.2fr 0.75fr 0.6fr 0.6fr 1fr 0.9fr;
+		column-gap: 55px;
+		padding: 40px 0;
+	}
+}
+
+.company__title {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.65em;
+	line-height: 165%;
+	letter-spacing: 1.1;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.company__text {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.65em;
+	line-height: 165%;
+	letter-spacing: 1.1;
+	color: #fff;
+	margin-top: 20px; 
+}
+
+.links__title {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.65em;
+	line-height: 165%;
+	letter-spacing: 1.1;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.links__item {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 0.65em;
+	line-height: 205%;
+	letter-spacing: 1.5;
+	color: #fff;
+}
+
+.contacts {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.65em;
+	line-height: 165%;
+	letter-spacing: 1.1;
+	color: #fff;
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__adress {
+		width: 90%;
+		margin-bottom: 10px;
+	}
+
+	&__tel {
+		color: #fff;
+	}
+
+	&__mail {
+		color: #fff;
+	}
+}
+
+.socials {
+	display: grid;
+	grid-template: 1fr/ 1fr 1fr 1fr;
+}
+
+.socials__img {
+	width: 25px;
+	height: 25px;
+	margin-left: 30px;
+	background: #fff;
+
+	&_item {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.copyright {
+	background: #171819;
+	padding: 20px 0;
+
+
+	&__text {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 0.65em;
+		line-height: 165%;
+		letter-spacing: 1.1;
+		color: #fff;
+		text-align: center;
+	}
+}
